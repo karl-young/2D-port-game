@@ -1,4 +1,5 @@
 import { scaleFactor } from './constants.js'
+import { displayDialogue } from './utils'
 import { k } from './kaboomCtx.js'
 
 k.loadSprite('spritesheet', './spritesheet.png', {
@@ -23,7 +24,7 @@ k.scene('main', async () => {
   const mapData = await (await fetch('./map.json')).json()
   const layers = mapData.layers
 
-  const map = k.make([k.sprite('map'), k.pos(0), k.scale(scaleFactor)])
+  const map = k.add([k.sprite('map'), k.pos(0), k.scale(scaleFactor)])
 
   const player = k.make([
     k.sprite('spritesheet', { anim: 'idle-down' }),
@@ -55,12 +56,39 @@ k.scene('main', async () => {
         if (boundary.name) {
           player.onCollide(boundary.name, () => {
             player.isInDialogue = true
-            // TODO
+            displayDialogue('TOdo: add dialogue'),
+              () => (player.isInDialogue = false)
           })
+        }
+      }
+      continue
+    }
+
+    if (layer.name === 'spawnpoints') {
+      for (const entity of layer.objects) {
+        if (entity.name === 'player') {
+          player.pos = k.vec2(
+            (map.pos.x + entity.x) * scaleFactor,
+            (map.pos.y + entity.y) * scaleFactor
+          )
+          k.add(player)
+          continue
         }
       }
     }
   }
+
+  k.onUpdate(() => {
+    k.camPos(player.pos.x, player.pos.y + 100)
+  })
+
+
+  k.onMouseDown((mouseBtn) => {
+    if (mouseBtn !== "left" || player.isInDialogue) return
+
+    const worldMousePos = k.toWorld(k.mousePos())
+    player.moveTo(worldMousePos, player.speed)
+  })
 })
 
 k.go('main')
