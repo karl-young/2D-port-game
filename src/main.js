@@ -1,4 +1,4 @@
-import { scaleFactor } from './constants.js'
+import { dialogueData, scaleFactor } from './constants.js'
 import { displayDialogue, setCamScale } from './utils'
 import { k } from './kaboomCtx.js'
 
@@ -56,7 +56,7 @@ k.scene('main', async () => {
         if (boundary.name) {
           player.onCollide(boundary.name, () => {
             player.isInDialogue = true
-            displayDialogue('TOdo: add dialogue'),
+            displayDialogue(dialogueData[boundary.name]),
               () => (player.isInDialogue = false)
           })
         }
