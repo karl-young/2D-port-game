@@ -65,3 +65,13 @@ body {
   color: rgb(238, 238, 238);
   user-select: none;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
+  #textbox {
+    padding: 0.5rem;
+    word-spacing: 0.1rem;
+  }
+}

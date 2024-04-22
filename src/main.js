@@ -7,18 +7,18 @@ k.loadSprite('spritesheet', './spritesheet.png', {
   sliceY: 31,
   anims: {
     // this is the character number
-    'idle-down': 936,
-    'walk-down': { from: 936, to: 939, loop: true, speed: 8 },
-    'idle-side': 975,
-    'walk-side': { from: 975, to: 978, loop: true, speed: 8 },
-    'idle-up': 1014,
-    'walk-up': { from: 1014, to: 1017, loop: true, speed: 8 },
+    'idle-down': 784,
+    'walk-down': { from: 784, to: 785, loop: true, speed: 8 },
+    'idle-side': 786,
+    'walk-side': { from: 786, to: 787, loop: true, speed: 8 },
+    'idle-up': 823,
+    'walk-up': { from: 823, to: 824, loop: true, speed: 8 },
   },
 })
 
 k.loadSprite('map', './map.png')
 
-k.setBackground(k.Color.fromHex('#311047'))
+k.setBackground(k.Color.fromHex('#046680'))
 
 k.scene('main', async () => {
   const mapData = await (await fetch('./map.json')).json()
