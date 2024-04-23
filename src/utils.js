@@ -3,6 +3,7 @@ export function displayDialogue(text, onDisplayEnd) {
   const dialogue = document.getElementById('dialogue')
 
   dialogueUI.style.display = 'block'
+
   let index = 0
   let currentText = ''
   const intervalRef = setInterval(() => {
@@ -14,7 +15,7 @@ export function displayDialogue(text, onDisplayEnd) {
     }
 
     clearInterval(intervalRef)
-  }, 1)
+  }, 20)
 
   const closeBtn = document.getElementById('close')
 
