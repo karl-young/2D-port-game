@@ -30,13 +30,23 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      # Debugging steps
+      - name: Inspect public directory
+        run: ls -l public
+
+      - name: Inspect src directory
+        run: ls -l src
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+
       - name: Inspect _site directory
         run: ls -l _site   # Add this step to inspect the contents of the _site directory
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
