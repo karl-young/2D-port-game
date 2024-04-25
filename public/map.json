@@ -203,7 +203,7 @@
                 {
                  "height":27.6846590909091,
                  "id":23,
-                 "name":"sofa-table",
+                 "name":"sofatable",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -280,7 +280,7 @@
                 {
                  "height":9.57670454545455,
                  "id":34,
-                 "name":"library",
+                 "name":"bookcase",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -302,7 +302,7 @@
                 {
                  "height":10.6676136363636,
                  "id":36,
-                 "name":"library",
+                 "name":"bookcase",
                  "rotation":0,
                  "type":"",
                  "visible":true,
