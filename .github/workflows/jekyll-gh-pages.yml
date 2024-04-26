@@ -42,14 +42,6 @@ jobs:
           source: ./
           destination: ./_site
 
-      # Copy utils.js and monogram.ttf to _site directory
-      - name: Copy utils.js and monogram.ttf to _site
-        run: |
-          cp src/utils.js _site/
-          cp monogram.ttf _site/
-
-      - name: Inspect _site directory
-        run: ls -l _site   # Add this step to inspect the contents of the _site directory
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
