@@ -1,7 +1,7 @@
 export const scaleFactor = 4
 
 export const dialogueData = {
-  pc: `This is my PC. I built it myself, complete with custom liquid cooling. It's been a journey of learning, and I've picked up a lot along the way. I use it for everything, from programming to setting up my 3D printer and working on various projects with a little gaming on the side. It's the heart of my creative space!`,
+  pc: `This is my PC. I built it myself, complete with custom liquid cooling. It's been a journey of learning, and I've picked up a lot along the way. I use it for everything, from programming to setting up my 3D printer and working on various projects with a little gaming on the side. It's the heart of my creative space! This is also where i check my <a href="https://www.linkedin.com/in/karl-young-4846602a4/" alt="Linkedin">Linkedin</a>.`,
   tv: `That's my TV. I've been using it to watch a lot of tech YouTubers lately, like...<a href="https://www.youtube.com/@freecodecamp" alt="freeCodeCamp">freeCodeCamp</a>, <a href="https://www.youtube.com/@programmingwithmosh" alt="Programming with Mosh">Programming with Mosh</a>, <a href="https://www.youtube.com/@Jayztwocents" alt="Jayztwocents">Jayztwocents</a> and <a href="https://www.youtube.com/@PirateSoftware" alt="PirateSoftware">PirateSoftware</a>" `,
   degree: `This is my degree. Achieving the New Zealand Certificate in Applied Software Development was a significant milestone for me, and I'm incredibly proud of the hard work and dedication it represents.`,
   bed: `This is my bed, where I find moments of inspiration. Ideas often come to me when I'm least expecting them, and I make sure to jot them down before drifting off to sleep. It's my cozy corner for both rest and creativity.`,
