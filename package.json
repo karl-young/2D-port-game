@@ -14,5 +14,8 @@
   },
   "dependencies": {
     "kaboom": "^3000.1.17"
+  },
+  "overrides": {
+    "rollup": "^4.59.0"
   }
 }
